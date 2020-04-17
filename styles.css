@@ -1,3 +1,9 @@
+:root {
+    --text-orange: #ff8b5d;
+    --text-blue: #567ce4;
+    --text-purple: #a76ee7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -221,4 +227,68 @@ body.hide {
 }
 .t-swipe3 {
     background: #ff8b5d;
+}
+
+/* Other pages */
+
+.fashion1,
+.fashion2,
+.fashion3 {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: #ffffff;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.fashion-img {
+    height: 70vh;
+    flex-basis: 30rem;
+}
+
+.fashion-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.fashion-text {
+    flex: 1;
+    position: relative;
+    flex-basis: 25rem;
+}
+
+.fashion-text h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    padding: 2.5rem 0;
+}
+.fashion-text p {
+    font-size: 1rem;
+    padding: 1rem 1rem 0 0;
+    margin-bottom: 10rem;
+}
+
+.fashion-nr {
+    font-size: 8rem;
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    color: #fff;
+    opacity: 0.2;
+}
+
+.fashion1 h1 {
+    color: var(--text-orange);
+}
+.fashion2 h1 {
+    color: var(--text-purple);
+}
+.fashion3 h1 {
+    color: var(--text-blue);
 }
