@@ -10,12 +10,17 @@ body {
     overflow-x: hidden;
 }
 
+body.hide {
+    overflow: hidden;
+}
+
 #logo {
     color: #ffffff;
     font-family: 'Abril Fatface';
 }
 
 .nav-header {
+    position: relative;
     min-height: 10vh;
     font-size: 1rem;
     display: flex;
@@ -164,7 +169,7 @@ body {
     position: fixed;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
     transition-property: transform, background-color;
     transform-origin: 100% 135%;
 }
