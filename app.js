@@ -93,7 +93,7 @@ function activeCursor(e) {
         gsap.to('.title-swipe', 1, {y: '0%'});
     } else {
         mouse.classList.remove('explore-active');
-        mouseTxt.innerText = 'Tap';
+        mouseTxt.innerText = '';
         gsap.to('.title-swipe', 1, {y: '100%'});
     }
 }
