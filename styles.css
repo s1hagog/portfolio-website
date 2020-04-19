@@ -10,10 +10,15 @@
     box-sizing: border-box;
 }
 
+main {
+    position: absolute;
+}
+
 body {
     background: #17181a;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 body.hide {
@@ -291,4 +296,26 @@ body.hide {
 }
 .fashion3 h1 {
     color: var(--text-blue);
+}
+
+.swipe {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+}
+
+.swipe1 {
+    background: var(--text-purple);
+    z-index: 50;
+}
+.swipe2 {
+    background: var(--text-blue);
+    z-index: 40;
+}
+.swipe3 {
+    background: var(--text-orange);
+    z-index: 30;
 }
