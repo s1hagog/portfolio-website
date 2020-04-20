@@ -35,11 +35,11 @@ function animateSlides() {
             reverse: false,
         })
             .setTween(slideTimeline)
-            .addIndicators({
-                colorStart: 'white',
-                colorTrigger: 'white',
-                name: 'slide',
-            })
+            // .addIndicators({
+            //     colorStart: 'white',
+            //     colorTrigger: 'white',
+            //     name: 'slide',
+            // })
             .addTo(controller);
 
         //New ANimatiomn
@@ -67,12 +67,12 @@ function animateSlides() {
         })
             .setPin(slide, {pushFollowers: false})
             .setTween(pageTimeline)
-            .addIndicators({
-                colorStart: 'white',
-                colorTrigger: 'white',
-                name: 'page',
-                indent: 200,
-            })
+            // .addIndicators({
+            //     colorStart: 'white',
+            //     colorTrigger: 'white',
+            //     name: 'page',
+            //     indent: 200,
+            // })
             .addTo(controller);
     });
 }
@@ -209,7 +209,7 @@ function detailAnimation() {
         slideTl.fromTo(slide, {opacity: 1}, {opacity: 0});
         slideTl.fromTo(nextSlide, {y: '100%'}, {y: '0%'}, '-=0.50');
         slideTl.fromTo(nextSlide, {opacity: 0}, {opacity: 1}, '-=1');
-        slideTl.fromTo(nextImg, {x: '50%'}, {x: '0%'}, '+=1');
+        slideTl.fromTo(nextImg, {x: '50%'}, {x: '0%'}, '-=1');
 
         //Scene
         detailScene = new ScrollMagic.Scene({
@@ -219,12 +219,12 @@ function detailAnimation() {
         })
             .setPin(slide, {pushFollowers: false})
             .setTween(slideTl)
-            .addIndicators({
-                colorStart: 'white',
-                colorTrigger: 'white',
-                name: 'detail',
-                indent: 200,
-            })
+            // .addIndicators({
+            //     colorStart: 'white',
+            //     colorTrigger: 'white',
+            //     name: 'detail',
+            //     indent: 200,
+            // })
             .addTo(controller);
     });
 }
