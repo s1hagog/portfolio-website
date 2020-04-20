@@ -23,7 +23,9 @@ function animateSlides() {
         slideTimeline.fromTo(revealImg, {x: '0%'}, {x: '100%'});
         slideTimeline.fromTo(img, {scale: 2}, {scale: 1}, '-=1');
         slideTimeline.fromTo(revealText, {x: '0%'}, {x: '100%'}, '-=0.75');
-        slideTimeline.fromTo(nav, {y: '-100%'}, {y: '0%'}, '-=0.5');
+
+        //this create a bug
+        // slideTimeline.fromTo(nav, {y: '-100%'}, {y: '0%'}, '-=0.5');
 
         //Create scene
         slideScene = new ScrollMagic.Scene({
@@ -51,7 +53,7 @@ function animateSlides() {
             {opacity: 0, scale: 0.5}
         );
 
-        pageTimeline.fromTo(nextSlide, {y: '50%'}, {y: '0%'}, '-=0.5');
+        pageTimeline.fromTo(nextSlide, {y: '50%'}, {y: '0%'}, '-=0.50');
 
         //Create New scene
         pageScene = new ScrollMagic.Scene({
@@ -136,12 +138,6 @@ barba.init({
             namespace: 'fashion',
             beforeEnter() {
                 logo.href = '../index.html';
-                gsap.fromTo(
-                    '.nav-header',
-                    1,
-                    {y: '-100%'},
-                    {y: '0%', ease: 'power2.inOut'}
-                );
                 detailAnimation();
             },
             beforeLeave() {
@@ -180,6 +176,12 @@ barba.init({
                     {x: '100%', stagger: 0.25, onComplete: done}
                 );
                 tl.fromTo(next.container, 1, {opacity: 0}, {opacity: 1});
+                tl.fromTo(
+                    '.nav-header',
+                    1,
+                    {y: '-100%'},
+                    {y: '0%', ease: 'power2.inOut'}
+                );
             },
         },
     ],
