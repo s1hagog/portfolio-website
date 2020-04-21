@@ -30,6 +30,7 @@ function animateSlides() {
         //Create scene
         slideScene = new ScrollMagic.Scene({
             triggerElement: slide,
+            // duration: '50%',
             triggerHook: 0.25,
             reverse: false,
         })
@@ -201,9 +202,14 @@ function detailAnimation() {
         });
         let nextSlide = slides.length - 1 === index ? 'end' : slides[index + 1];
         const nextImg = nextSlide.querySelector('img');
+
+        //Set some delay
+        slideTl.fromTo(nextSlide, {y: '0%'}, {y: '100%'});
+
         slideTl.fromTo(slide, {opacity: 1}, {opacity: 0});
+        slideTl.fromTo(nextSlide, {y: '100%'}, {y: '0%'}, '-=0.50');
         slideTl.fromTo(nextSlide, {opacity: 0}, {opacity: 1}, '-=1');
-        slideTl.fromTo(nextImg, {x: '50%'}, {x: '0%'});
+        slideTl.fromTo(nextImg, {x: '50%'}, {x: '0%'}, '+=1');
 
         //Scene
         detailScene = new ScrollMagic.Scene({
