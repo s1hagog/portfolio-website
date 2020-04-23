@@ -19,15 +19,18 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     position: relative;
+    cursor: none;
 }
 
 body.hide {
     overflow: hidden;
+    cursor: auto;
 }
 
 #logo {
     color: #ffffff;
     font-family: 'Abril Fatface';
+    cursor: none;
 }
 
 .nav-header {
@@ -157,9 +160,9 @@ body.hide {
     line-height: 2rem;
 }
 
-.burger {
+/* .burger {
     cursor: pointer;
-}
+} */
 
 .reveal-img,
 .reveal-text {
