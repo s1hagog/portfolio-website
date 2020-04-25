@@ -121,6 +121,7 @@ body.hide {
 }
 
 .nav-bar {
+    color: #555555;
     position: fixed;
     top: 0;
     left: 0;
@@ -132,8 +133,8 @@ body.hide {
     align-items: center;
     z-index: 1;
     opacity: 1;
-    clip-path: circle(50px at 100% -10%);
-    -webkit-clip-path: circle(50px at 100% -10%);
+    /* clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%); */
 }
 
 .nav-links {
@@ -144,6 +145,15 @@ body.hide {
 
 .nav-links li {
     padding: 2rem 0;
+}
+
+.nav-links li a {
+    color: #555555;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #17181a;
 }
 
 .contact-heading {
