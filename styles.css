@@ -401,6 +401,10 @@ body.hide {
         display: block;
     }
 
+    .nav-bar ul {
+        margin: 8rem 0 0 0;
+    }
+
     .nav-links {
         font-size: 2rem;
         text-align: center;
@@ -422,5 +426,12 @@ body.hide {
     }
 }
 
-@media screen and (max-width: 767px) {
-}
+/* @media screen and (max-width: 767px) {
+    .cursor {
+        display: none;
+    }
+
+    .nav-bar {
+        width: 100vw;
+    }
+} */
