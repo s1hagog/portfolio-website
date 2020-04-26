@@ -24,7 +24,6 @@ body {
 
 body.hide {
     overflow: hidden;
-    cursor: auto;
 }
 
 #logo {
@@ -133,8 +132,8 @@ body.hide {
     align-items: center;
     z-index: 1;
     opacity: 1;
-    /* clip-path: circle(50px at 100% -10%);
-    -webkit-clip-path: circle(50px at 100% -10%); */
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
 }
 
 .nav-links {
@@ -150,6 +149,7 @@ body.hide {
 .nav-links li a {
     color: #555555;
     text-decoration: none;
+    cursor: none;
 }
 
 .nav-links li a:hover {
@@ -196,6 +196,11 @@ body.hide {
     transition: all 0.25s ease-in-out;
     transition-property: transform, background-color;
     transform-origin: 100% 135%;
+}
+
+.hide .cursor {
+    border: 2px solid #000000;
+    z-index: 1;
 }
 
 .cursor.nav-active {
@@ -411,4 +416,7 @@ body.hide {
     .fashion-img {
         height: 50vh;
     }
+}
+
+@media screen and (max-width: 767px) {
 }
