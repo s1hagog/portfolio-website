@@ -95,6 +95,12 @@ function activeCursor(e) {
         mouse.classList.remove('nav-active');
     }
 
+    if (item.classList.contains('nav-single-link')) {
+        mouse.classList.add('nav-link-active');
+    } else {
+        mouse.classList.remove('nav-link-active');
+    }
+
     if (item.classList.contains('explore')) {
         mouse.classList.add('explore-active');
         mouseTxt.innerText = 'Tap';
