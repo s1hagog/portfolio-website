@@ -104,11 +104,15 @@ function activeCursor(e) {
     if (item.classList.contains('explore')) {
         mouse.classList.add('explore-active');
         mouseTxt.innerText = 'Tap';
-        gsap.to('.title-swipe', 1, {y: '0%'});
+        document.querySelector('.title-swipe')
+            ? gsap.to('.title-swipe', 1, {y: '0%'})
+            : null;
     } else {
         mouse.classList.remove('explore-active');
         mouseTxt.innerText = '';
-        gsap.to('.title-swipe', 1, {y: '100%'});
+        document.querySelector('.title-swipe')
+            ? gsap.to('.title-swipe', 1, {y: '100%'})
+            : null;
     }
 }
 
