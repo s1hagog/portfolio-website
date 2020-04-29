@@ -80,6 +80,8 @@ function animateSlides() {
 let mouse = document.querySelector('.cursor');
 let mouseTxt = mouse.querySelector('span');
 const burger = document.querySelector('.burger');
+let exploreBtns = document.querySelector('.explore');
+const pageAnimHeading = document.querySelector('.swipe-heading');
 
 function cursor(e) {
     mouse.style.top = e.clientY + 'px';
@@ -130,6 +132,10 @@ function navToggle(e) {
         gsap.to('.nav-bar', 1, {clipPath: 'circle(50px at 100% -10%)'});
         document.body.classList.remove('hide');
     }
+}
+
+function changeAnimationHeading(e) {
+    console.log(e.target.dataset.heading);
 }
 
 //Barba page transition
@@ -185,7 +191,7 @@ barba.init({
                 const tl = gsap.timeline({defaults: {ease: 'power2.inOut'}});
                 tl.fromTo(
                     '.swipe',
-                    1,
+                    1.5,
                     {x: '0%'},
                     {x: '100%', stagger: 0.25, onComplete: done}
                 );
@@ -243,5 +249,5 @@ function detailAnimation() {
 burger.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);
-
+exploreBtns.addEventListener('click', changeAnimationHeading);
 // animateSlides();
