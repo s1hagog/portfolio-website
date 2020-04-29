@@ -185,7 +185,7 @@ barba.init({
                 const tl = gsap.timeline({defaults: {ease: 'power2.inOut'}});
                 tl.fromTo(
                     '.swipe',
-                    0.75,
+                    1,
                     {x: '0%'},
                     {x: '100%', stagger: 0.25, onComplete: done}
                 );
