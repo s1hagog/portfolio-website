@@ -80,7 +80,7 @@ function animateSlides() {
 let mouse = document.querySelector('.cursor');
 let mouseTxt = mouse.querySelector('span');
 const burger = document.querySelector('.burger');
-let exploreBtns = document.querySelector('.explore');
+let exploreBtns = document.querySelectorAll('.explore');
 const pageAnimHeading = document.querySelector('.swipe-heading');
 
 function cursor(e) {
@@ -135,6 +135,7 @@ function navToggle(e) {
 }
 
 function changeAnimationHeading(e) {
+    console.log(e.target.dataset.heading);
     pageAnimHeading.innerText = e.target.dataset.heading;
 }
 
@@ -249,5 +250,8 @@ function detailAnimation() {
 burger.addEventListener('click', navToggle);
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mouseover', activeCursor);
-exploreBtns.addEventListener('click', changeAnimationHeading);
+
+exploreBtns.forEach((btn) =>
+    btn.addEventListener('click', changeAnimationHeading)
+);
 // animateSlides();
