@@ -135,7 +135,7 @@ function navToggle(e) {
 }
 
 function changeAnimationHeading(e) {
-    console.log(e.target.dataset.heading);
+    pageAnimHeading.innerText = e.target.dataset.heading;
 }
 
 //Barba page transition
