@@ -148,6 +148,9 @@ barba.init({
             beforeEnter() {
                 animateSlides();
                 logo.href = './index.html';
+
+                //rebuilding event handlers;
+                rebuildEvents();
             },
             beforeLeave() {
                 slideScene.destroy();
@@ -244,6 +247,13 @@ function detailAnimation() {
             // })
             .addTo(controller);
     });
+}
+
+function rebuildEvents() {
+    let exploreBtnsRebuilt = document.querySelectorAll('.explore');
+    exploreBtnsRebuilt.forEach((btn) =>
+        btn.addEventListener('click', changeAnimationHeading)
+    );
 }
 
 // Event Listenres
