@@ -135,7 +135,6 @@ function navToggle(e) {
 }
 
 function changeAnimationHeading(e) {
-    console.log(e.target.dataset.heading);
     pageAnimHeading.innerText = e.target.dataset.heading;
 }
 
@@ -263,3 +262,4 @@ window.addEventListener('mouseover', activeCursor);
 exploreBtns.forEach((btn) =>
     btn.addEventListener('click', changeAnimationHeading)
 );
+logo.addEventListener('click', changeAnimationHeading);
